@@ -78,6 +78,7 @@ else()
       CXX_EXTENSIONS OFF
     )
     if(STDCXXFS_SUPPORTED)
+      set(CMAKE_CXX_FLAGS "-g  -std=c++17 -lstdc++fs")
       target_link_libraries(cpr PUBLIC stdc++fs)
     else()
       try_compile(
