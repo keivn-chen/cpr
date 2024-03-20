@@ -4,6 +4,7 @@
 
 namespace cpr {
 ErrorCode Error::getErrorCodeForCurlError(std::int32_t curl_code) {
+    printf("curl_code = %d", curl_code);
     switch (curl_code) {
         case CURLE_OK:
             return ErrorCode::OK;
